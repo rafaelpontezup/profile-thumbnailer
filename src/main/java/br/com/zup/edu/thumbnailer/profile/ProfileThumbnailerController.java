@@ -35,7 +35,7 @@ public class ProfileThumbnailerController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping(
+    @PostMapping(
         value = "/api/users/{id}/thumbnails/preview",
         produces = MediaType.IMAGE_PNG_VALUE
     )

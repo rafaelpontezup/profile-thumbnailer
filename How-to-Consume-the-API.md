@@ -18,7 +18,7 @@ curl --request POST \
 
 Para consumir o endpoint de **preview de thumbnail** basta executar:
 ```shell
-curl --request GET \
+curl --request POST \
   --url http://localhost:8080/api/users/eea0b8ba-b195-4e08-8a30-1df60854186e/thumbnails/preview \
   --header 'Content-Type: application/json' \
   --data '{
