@@ -1,5 +1,8 @@
 package br.com.zup.edu.thumbnailer.profile;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
+
 import javax.imageio.ImageIO;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -50,7 +53,8 @@ public class ProfilePhotoRequest {
         try (InputStream stream = new ByteArrayInputStream(rawPhoto)) {
             return ImageIO.read(stream);
         } catch (IOException e) {
-            throw new IllegalStateException("Error while reading the profile photo from request: " + e.getMessage());
+            throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
+                    "Error while reading the profile photo from request: " + e.getMessage());
         }
     }
 
