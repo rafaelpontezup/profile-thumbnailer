@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.zup.edu</groupId>
 	<artifactId>profile-thumbnailer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>profile-thumbnailer</name>
 	<description>Microsserviço responsável por gerar um thumbnail com watermark da empresa a partir de uma foto de perfil do usuário</description>
 	<properties>
@@ -37,6 +37,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.5.11</version>
 		</dependency>
 
 		<dependency>
